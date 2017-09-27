@@ -1,0 +1,16 @@
+.jumbotron
+{
+    min-height: 100vh;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.5);
+    margin-bottom: 0px;
+}
+.container
+{
+    text-align: center;
+}
+#heading
+{
+    color: rgb(255,255,255);
+    text-shadow: 2px 2px black;
+}

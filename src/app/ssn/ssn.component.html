@@ -1,0 +1,120 @@
+<form class="form-inline">
+    <label class="sr-only">SSN Number:</label>
+    <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="SSN Number" [(ngModel)]='searchssn' [ngModelOptions]="{standalone: true}" (focus)='showsearchfor()' (focusout)='hidesearchfor()'>
+  
+    <button type="submit" class="btn btn-secondary" (click)='search()'>Search</button>
+    <br>
+</form>
+
+<div *ngIf = 'showData'>
+    <h3>{{searchstatestring}} {{searchssn}}</h3>
+</div>
+
+
+
+<div class="container" *ngIf='obj && showdetails' style="padding: 3%">
+        <br>
+        <br>
+    <div class="container">
+    <div class="card bg-light mb-3">
+        <div class="card-block">
+          <h4 class="card-title">Customer Details</h4>
+          <hr>
+        </div>
+    <div  class="card bg-light mb-3" id="containcard">
+    <div class="card card bg-light mb-3">
+        <table>
+            <tr>
+                <th>
+                    CustomerID:
+                </th>
+                <td>
+                    {{obj.LOANAPP0OperationResponse.ca_inquire_request.ca_cust_num}}
+                </td>
+            </tr>
+            <tr>
+                    <th>
+                        FirstName:
+                    </th>
+                    <td>
+                        {{split[0]}}
+                   </td>
+            </tr>
+            <tr>
+                    <th>
+                        LastName:
+                    </th>
+                    <td>
+                        {{split[1]}}
+                   </td>
+            </tr>
+            <tr>
+                    <th>
+                        Date Of Birth:
+                    </th>
+                    <td>
+                        {{split[2]}}
+                   </td>
+            </tr>
+            <tr>
+                    <th>
+                        Salary:
+                    </th>
+                    <td>
+                        {{split[7]}}
+                   </td>
+            </tr>
+        </table>
+    </div>
+    <div class="card bg-light mb-3">
+            <table>
+                <tr>
+                    <th>
+                        Address:
+                    </th>
+                    <td>
+                            {{split[3]}}
+                    </td>
+                </tr>
+                <tr>
+                        <th>
+                            City:
+                        </th>
+                        <td>
+                            {{split[4]}}
+                       </td>
+                </tr>
+                <tr>
+                        <th>
+                            State:
+                        </th>
+                        <td>
+                            {{split[5]}}
+                       </td>
+                </tr>
+                <tr>
+                        <th>
+                            Zip:
+                        </th>
+                        <td>
+                            {{split[6]}}
+                       </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+        <a href="#" class="btn btn-primary" (click)='reset()'>Reset</a>
+      </div>
+    </div>
+</div>
+<div class="alert alert-danger" role="alert" *ngIf='errorFound'>
+    No Such Record Exists !!!
+</div>
+
+
+
+
+
+
+
+

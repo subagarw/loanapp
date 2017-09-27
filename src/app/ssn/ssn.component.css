@@ -1,0 +1,54 @@
+.form-inline
+{
+    justify-content: center;
+    padding: 3%;
+}
+.container
+{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+h3{
+    color: white;
+    text-shadow: 1px 1px black;
+}
+.card
+{
+    padding: 10px;
+    height: auto;
+    width: auto;
+}
+@media(min-width:767px){
+#containcard
+{
+    flex-direction: row;
+}
+}
+
+.card
+{
+    border: 0ch;
+}
+
+table
+{
+    width: 100%;
+}
+tr
+{
+    text-align: right;
+}
+td,th{
+    margin: 5px;
+    padding: 5px;
+}
+hr{
+    border-color: #007bff;
+}
+.alert-danger
+{
+    background-color: rgba(0, 0, 0, 0);
+    color: red;
+    border: 0ch;
+}
